@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio cases</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <div class="portfolio-wrapper">
+        <header class="portfolio__header">
+            <div class="nav"></div>
+            <div class="header__subheader">
+                <div class="header__subheader__left">All works <br> of the agency</div>
+                <div class="header__subheader__right">
+                    <div class="header__subheader__right__awwwards">
+                        <a target="_blank" href="https://www.red-dot.org/de/project/creative-trends-2023-66603"><img src="./assets/reddot.png" alt="reddot" class="reddot"></a>
+                        <a target="_blank" href="https://www.awwwards.com/sites/creative-trends-2023"><img src="./assets/awwward.png" alt="" class="awwwards"></a>
+                    </div>
+                    <a href="#portfolio-cases" tabindex="1">
+                        <button class="header__subheader__right__btn action-button">
+                            <p>see all projects</p>
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="currentFill" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="currentColor"/>
+                                <path d="M25.2857 13H22.7143V15.5143H25.2857V13Z" fill="currentColor"/>
+                                <path d="M22.7143 17.5048H25.2857V29.9714H22.7143V17.5048Z" fill="currentColor"/>
+                                <path d="M17.5714 24.9429H15V27.4572H17.5714V29.9714H20.1428V27.4571L17.5714 27.4572L17.5714 24.9429Z" fill="currentColor"/>
+                                <path d="M33 24.9429H30.4286V27.4571H27.8572V29.9714H30.4286L30.4286 27.4571L33 27.4572V24.9429Z" fill="currentColor"/>
+                                <path d="M27.8572 29.9714H25.2857H22.7143V32.4857V35H25.2857V32.4857L27.8571 32.4857L27.8572 29.9714Z" fill="currentColor"/>
+                                <path d="M22.7143 29.9714H20.1428L20.1428 32.4857L22.7143 32.4857V29.9714Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <ul class="portfolio__tags-line" id="portfolio-cases">
+            <li>all</li>
+            <li>branding</li>
+            <li>landing</li>
+            <li>web-site</li>
+            <li>application</li>
+            <li>saas</li>
+            <li>artdirection</li>
+            <li>developing</li>
+        </ul>
+        <ul class="portfolio-cases">
+            <li class="portfolio-cases__case">
+                <div class="portfolio-cases__case__slider">
+                    <div class="portfolio-cases__case__slider__gallery">
+                        <img 
+                            src="./assets/cases covers/image (1).png" 
+                            alt=""
+                            class="portfolio-cases__case__slider__gallery__item"
+                        >
+                        <img 
+                            src="./assets/cases covers/image (2).png" 
+                            alt=""
+                            id="dd"
+                            class="portfolio-cases__case__slider__gallery__item"
+                        >
+                        <img 
+                            src="./assets/cases covers/image (3).png" 
+                            alt=""
+                            class="portfolio-cases__case__slider__gallery__item"
+                        >
+                    </div>
+                    <div class="portfolio-cases__case__slider__controls">
+                        <button class="portfolio-cases__case__slider__controls__btn" id="portfolio-prev">
+                            <img src="./assets/icons/portfolio arrow.svg" alt="Previous image">
+                        </button>
+                        <div class="portfolio-cases__case__slider__bullets">
+                            
+                        </div>
+                        <button class="portfolio-cases__case__slider__controls__btn" id="portfolio-next">
+                            <img src="./assets/icons/portfolio arrow.svg" alt="Next image">
+                        </button>
+                    </div>
+                </div>
+                <div class="portfolio-cases__case__info">
+                    <div class="portfolio-cases__case__info__title">
+                        Creative trends 2023 annual research of Depositphotos
+                    </div>
+                    <div class="portfolio-cases__case__info__tags">
+                        concept - web site - developing
+                    </div>
+                    <button class="portfolio-cases__case__info__more-btn">
+                        <a href="#">more details</a>
+                        <img src="./assets/icons/portfolio arrow.svg" alt="See more details ->">
+                    </button>
+                </div>
+            </li>
+        </ul>
+        <div class="contacts"></div>
+        <footer class="footer"></footer>
+    </div>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/mail-form.js"></script>
+</body>
+</html>
