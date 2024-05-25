@@ -47,11 +47,32 @@ function animateTitle () {
     })
 }
 
-// location.reload()
-window.addEventListener('load', ()=> {
-    //scrollTo(0, 0);
+function animateGallery() {
+    //LENGTH OF VISIBLE GALLERY === 100VH - PADDING(80PX) 
+    let gallery = qs('.sm-and-partners__sm-gallery');
+    let galleryLength = getRect(gallery).width;
+
+    let galleryItems = qsa('.sm-and-partners__sm-gallery__item');
+
+    let lastGalleryItem = galleryItems[galleryItems.length - 1];
+    let lastGalleryItemWidth = getRect(lastGalleryItem).width;
+    let lastGalleryItemX = getRect(lastGalleryItem).x;
+    
+    let totalTransition = lastGalleryItemX + lastGalleryItemWidth - galleryLength;
+
+    gsap.to('.sm-and-partners__sm-gallery', {
+        x: -totalTransition,
+        duration: 100,
+        repeat: -1,
+        ease: 'linear'
+    })
+}
+
+//INITIALIZE AND RUN ALL ANIMATIONS
+listenTo(window, 'load', ()=> {
     animateCircle ();
     animateTitle ();
+    //animateGallery();
 })
 
 
@@ -113,7 +134,11 @@ function fadeInCases () {
 }
 
 
-
 //fadeInCases ();
 //raiseCases ();
 //skewCases ();
+
+
+
+
+
