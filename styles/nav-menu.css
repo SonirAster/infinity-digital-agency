@@ -50,12 +50,6 @@
     display: none;
 }
 
-/* .nav__panel__menu-icon:focus,
-.nav__panel__btn:focus {
-    border: 1px solid rgba(0, 140, 241, 1);
-    outline: 3px solid rgba(0, 140, 241, 0.3);
-} */
-
 .nav__panel__menu-icon img {
     width: 32px;
     height: 7.89px;
@@ -92,6 +86,14 @@
     position: relative;
     border: 1px solid var(--light-yellow);
 }
+
+.nav__panel__btn a {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 .nav__panel__btn:hover {
     border: 1px solid #000;

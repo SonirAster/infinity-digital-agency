@@ -256,20 +256,6 @@
     aspect-ratio: 0.973;
 }
 
-@keyframes Ring {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-
-}
-.demo-item__ring {
-
-}
-
 .demo-item__ring img{
     width: 100%;
     height: 100%;
