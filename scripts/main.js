@@ -24,7 +24,6 @@ initUnfoldingItems ();
 initNavigationMenu ();
 initContactForms ();
 initFooter ();
-initPortfolioSlider();
 
 function initUnfoldingItems () {
     let pluses = qsa('.services__list__item__title__btn');
@@ -94,57 +93,6 @@ function initFooter () {
     .then(res => {return res.text()})
     .then(data => {footer.innerHTML = data})
 }
-
-function initPortfolioSlider () {
-    let portfolioSliderGallery = Array.from(qsa('.portfolio-cases__case__slider__gallery__item'))
-
-    const slider = {
-        slider: qs('.portfolio-cases__case__slider__gallery'),
-        slideWidth: getRect(portfolioSliderGallery[0]).width,
-        firstSlide: portfolioSliderGallery[0],
-        lastSlide: portfolioSliderGallery.at(-1),
-        nextBtn: qs('#portfolio-next'),
-        prevBtn: qs('#portfolio-prev')
-    }
-
-    let selectedSlide = 0;
-    let lastSlideIndex = portfolioSliderGallery.indexOf(slider.lastSlide);
-
-    listenTo(slider.prevBtn, 'click', () => {
-        if (selectedSlide == 0) {
-            selectedSlide = lastSlideIndex;
-            slider.slider.scroll({ 
-                left: getRect(slider.lastSlide).left, 
-                behavior: "smooth" 
-            });
-        } else {
-            slider.slider.scrollBy({
-                left: -slider.slideWidth,
-                behavior: 'smooth'
-            });
-            selectedSlide -= 1;
-        }
-    })
-
-    listenTo(slider.nextBtn, 'click', () => {
-        if (selectedSlide < lastSlideIndex) {
-            slider.slider.scrollBy({
-                left: (slider.slideWidth + 1),
-                behavior: 'smooth'
-            });
-            selectedSlide += 1;
-        } else {
-            selectedSlide = 0;
-            slider.slider.scroll({ 
-                left: getRect(slider.firstSlide).left, 
-                behavior: "smooth" 
-            });
-        }
-    })
-}
-
-
-
 
 
 

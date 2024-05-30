@@ -1,0 +1,49 @@
+.case-wrappper {
+    padding: 0 40px;
+}
+
+.single-case__title {
+    color: #000;
+    margin-top: 40px;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -5%;
+}
+
+.single-case__tags {
+    margin-top: 24px;
+    padding: 8px;
+    font-family: Minecraft;
+    font-weight: 400;
+    color: #000;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: -3%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.case-head.header__subheader {
+    margin-bottom: 80px;
+}
+.case-wrappper .header__subheader__left {
+
+}
+
+.header__subheader__right {
+}
+.header__subheader__right__awwwards {
+}
+.reddot {
+}
+.awwwards {
+}
+.header__subheader__right__btn {
+}
+.action-button {
+}
+.contacts {
+}
+.footer {
+}

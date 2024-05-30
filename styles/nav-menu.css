@@ -27,7 +27,7 @@
 .nav__logo__cancel {
     position: absolute;
     top: 2px;
-    right: 24px;
+    right: 0px;
     display: none;
     background: transparent;
 }
@@ -40,13 +40,14 @@
 .nav__panel__list {
     padding: 8px 64px;
     display: flex;
+    align-items: center;
     color: rgba(0, 0, 0, 0.5);
 }
 
 .nav__panel__menu-icon {
     background: transparent;
     padding: 0 4px;
-    margin-right: 24px;
+    margin-left: 10px;
     display: none;
 }
 
@@ -76,6 +77,86 @@
     border-radius: 32px;
 }
 
+.nav__panel__lang-switch {
+    position: relative;
+    margin-right: 8px;
+}
+
+.nav.toggled .nav__panel__lang-switch {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav__panel__lang-switch:hover .nav__panel__lang-switch__list {
+    display: block;
+}
+
+.nav__panel__lang-switch:hover .nav__panel__lang-switch__title i img {
+    transform: rotate(180deg);
+}
+
+.nav__panel__lang-switch__title {
+    border-radius: 60px;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    gap: 2.95px;
+    align-items: center;
+    align-content: center;
+}
+
+.nav__panel__lang-switch__title:hover,
+.nav__panel__lang-switch__list__item:hover {
+    background: #F0F0F0;
+}
+
+.nav__panel__lang-switch__title span {
+    display: block;
+}
+
+.nav__panel__lang-switch__title span,
+.nav__panel__lang-switch__list__item {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16.38px;
+}
+
+.nav__panel__lang-switch__title i {
+    display: flex;
+}
+
+.nav__panel__lang-switch__title i img {
+    transition: all 0.5s ease;
+}
+
+.nav__panel__lang-switch__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    z-index: 1000;
+    display: none;
+}
+
+.nav__panel__lang-switch__list__item {
+    width: 74px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__panel__lang-switch__list__item:hover {
+    background: #F0F0F0;
+}
+
+.lang-switch__selected {
+    display: none;
+}
+
 .nav__panel__btn {
     color: #000;
     font-weight: 800;
@@ -93,7 +174,6 @@
     display: flex;
     justify-content: center;
 }
-
 
 .nav__panel__btn:hover {
     border: 1px solid #000;
@@ -193,7 +273,7 @@
     --link-ratio: calc(var(--panel-height) / 100 * 5);
     font-size: var(--link-ratio);
     line-height: var(--link-ratio);
-    padding: var(--link-ratio) 0;
+    padding: var(--link-ratio) 16px;
     letter-spacing: -3%;
     text-align: center;
     color: #071026;
@@ -242,6 +322,13 @@
     .nav__panel__list {
         display: none;
     }
+
+    .nav__panel__btn {
+        display: none;
+    }
+    .nav.toggled .nav__panel__btn {
+        display: block;
+    }
 }
 
 @media (max-width: 640px) {
@@ -259,7 +346,7 @@
         margin-top: 12px;
     }
 
-    .nav__logo img {
+    .nav__logo a img {
         width: 94px;
         height: 28px;
     }
@@ -315,13 +402,19 @@
 @media (max-height: 650px) {
     .nav.toggled .nav__panel__list a {
         --item-padding:calc(var(--panel-height) / 100 * 4);
-        padding: clamp(var(--item-padding), var(--link-ratio), var(--link-ratio)) 0;
+        padding: clamp(var(--item-padding), var(--link-ratio), var(--link-ratio)) 16px;
     }
 } 
 
 @media (max-height: 600px) {
     .nav.toggled .nav__panel {
         padding: 8px 24px;
+    }
+
+    .nav.toggled .nav__panel {
+        height: 100%; 
+        overflow-y: scroll;
+        margin-bottom: 160px;
     }
 }
 
@@ -351,7 +444,7 @@
     .nav.toggled .nav__panel__list a {
         font-size: clamp(20px, 4.3vh, 88px);
         line-height: clamp(20px, 4.3vh, 79px);
-        padding: clamp(20px, 4.3vh, 60px) 0;
+        padding: clamp(20px, 4.3vh, 60px) 16px;
     }
 
     .nav.toggled .nav__panel__btn {

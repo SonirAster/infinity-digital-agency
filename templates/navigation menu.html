@@ -13,9 +13,18 @@
         <a href="#services">services</a>
         <a href="#contacts">contact us</a>
     </nav>
-    <button class="nav__panel__menu-icon">
-        <img src="./assets/icons/menu.svg" alt="menu">
-    </button>
+    <div class="nav__panel__lang-switch">
+        <div class="nav__panel__lang-switch__title">
+            <span>en</span>
+            <i><img src="../assets/icons/lang arrow.svg"></i>
+        </div>
+        <div class="nav__panel__lang-switch__list">
+            <div class="nav__panel__lang-switch__list__item lang-switch__selected">en</div>
+            <div class="nav__panel__lang-switch__list__item">de</div>
+            <div class="nav__panel__lang-switch__list__item">fr</div>
+            <div class="nav__panel__lang-switch__list__item">ua</div>
+        </div>
+    </div>
     <button onclick="window.location='#contacts'" class="nav__panel__btn action-button">
         <a href="#contacts">
             Let's talk
@@ -30,5 +39,8 @@
                 </svg>
             </i>
         </a>
+    </button>
+    <button class="nav__panel__menu-icon">
+        <img src="./assets/icons/menu.svg" alt="menu">
     </button>
 </div>
