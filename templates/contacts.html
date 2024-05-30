@@ -1,0 +1,73 @@
+<header class="contacts__header demo-header">
+    <div class="contacts__header__left demo-header__title">Contact Us</div>
+    <div class="contacts__header__right demo-header__description">
+        <img src="./assets/head black.png" alt="background" class="demo-header__description__background">
+        <p class="demo-header__description__text">
+            Send the message to us. We are ready to make your business more productive                    
+        </p>
+    </div>
+</header>
+<main class="contacts__main">
+    <div class="contacts__main__left"></div>
+    <form 
+        method="post" 
+        action="{% url 'main' %}"
+        class="contacts__main__right"
+    >
+    {% csrf_token %}
+        <div class="form-input">
+            <label for="name">name</label>
+            <input 
+                type="text" 
+                name="name" 
+                placeholder="alexander" 
+                maxlength="80"
+            >
+        </div>
+        <div class="form-input mail">
+            <label for="email">
+                email
+                <span id="mail-error" class="form-input__error-message">You may have entered incorrect information.</span>
+            </label>
+            <input 
+                type="text" 
+                name="email" 
+                placeholder="create@email.com" 
+            >
+            <img src="./assets/icons/success.svg" class="input-img">
+        </div>
+        <div class="form-input phone">
+            <label for="phone">
+                phone
+                <span id="phone-error" class="form-input__error-message">You may have entered incorrect information.</span>
+            </label>
+            <input 
+                type="tel" 
+                name="phone" 
+                id="phone"
+                maxlength="20"
+            >
+            <img src="./assets/icons/success.svg" class="input-img">
+            <div class="form-input__custom-placeholder">
+                <span>+000</span> 000 000 000 00
+            </div>
+        </div>
+        <div class="form-input_checkbox">
+            <label for="brief_check">I want to get a brief</label>
+            <div class="form-input_checkbox__input-container">
+                <input 
+                    type="checkbox" 
+                    name="brief_check"
+                >
+                <img src="./assets/icons/check.svg">
+            </div>
+        </div>
+        <button class="contacts__main__right__submit-btn action-button" type="submit">
+            <span>send message</span>
+            <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="1" width="47" height="47" rx="23.5" stroke="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9851 16.5381L14.9851 18.538H13.0146V20.538L15.0146 20.538V20.4863H17.002L17.002 18.5381H18.9851H20.9851H22.9851H24.9851H26.9851H28.9851H30.9819V20.5018H32.9422V20.538H34.9422V18.538H32.9851V16.5381H30.9851H28.9851H26.9851H24.9851H22.9851H20.9851H18.9851H16.9851H14.9851ZM14.9852 30.538L14.9852 32.538H16.9852H18.9852H20.9852H22.9852H24.9852H26.9852H28.9852H30.9852H32.9852V30.538L34.9725 30.538V28.538H34.9649V26.538H34.9573V24.538L34.9498 24.538V22.538L34.9422 22.538V20.538H32.9422V22.538L32.9498 22.538V24.538L32.9573 24.538V26.538H32.9649V28.538H32.9725V30.538H30.9852H28.9852H26.9852H24.9852H22.9852H20.9852H18.9852H16.9852H15.0449L15.0449 28.538H15.0374L15.0374 26.538H15.0298L15.0298 24.538L15.0222 24.538L15.0222 22.538L15.0146 22.538L15.0146 20.538L13.0146 20.538V22.538L13.0222 22.538L13.0222 24.538L13.0298 24.538L13.0298 26.538H13.0374L13.0374 28.538H13.0449L13.0449 30.538H14.9852ZM17.0527 20.5V22.5H19.0527V20.5H17.0527ZM19.0522 24.5381V22.5381H21.0522V24.5381H19.0522ZM21.0518 24.5762V26.5762H22.9936V28.5288H24.9936V26.5916H26.9321V24.5916H24.9321V26.5288H23.0518V24.5762H21.0518ZM30.9311 20.5154V22.5154H28.9311V20.5154H30.9311ZM28.9316 24.5535V22.5535L26.9316 22.5535V24.5535H28.9316Z" fill="currentColor"/>
+            </svg>
+        </button>
+    </form>
+</main>

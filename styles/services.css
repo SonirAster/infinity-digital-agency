@@ -1,0 +1,232 @@
+.services__list__item {
+    position: relative;
+    border-bottom: 1px solid #000;
+    padding: 32px 10px 32px 0;
+    height: fit-content;
+    transition: all 0.6s ease;
+    background: white;
+}
+
+.item-unfolded {
+    padding: 64px 10px 64px 0;
+}
+
+.services__list__item__count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38.4px;
+    letter-spacing: -5%;
+}
+
+.services__list__item__title {
+    width: 100%;
+    position: relative;
+}
+
+.services__list__item__title span{
+    text-transform: uppercase;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: -5%;
+    margin-left: 155px;
+    display: block;  
+    margin-right: 82px;
+}
+
+.services__list__item__title__btn {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.services__list__item__descr {
+    --ML: 160px;
+    width: calc(100% - var(--ML));
+    margin-left: var(--ML);
+    transition: all 0.6s ease;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    user-select: none;
+    visibility: hidden;
+    margin-top: 0;
+    height: 0;
+    transform: translateY(240px);
+}
+
+.services__list__item__descr p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29.05px;
+    letter-spacing: -2%;
+    width: 588px;
+    align-self: end;
+}
+
+.services__list__item__see-more-btn {
+   align-self: end;
+}
+
+.opened {
+    opacity: 1;
+    visibility: visible;
+    user-select: initial;
+    margin-top: 56px;
+    height: 100px;
+    transition: all 0.5s ease;
+    transform: translateY(0);
+    margin-bottom: 48px;
+}
+
+.services__list__ending-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22px;
+    background: #fff;
+    position: relative;
+}
+
+.services__list__ending-line span:first-child {
+    height: 1px;
+}
+
+.services__list__ending-line span {
+    height: 2px;
+    background: #000;
+}
+
+.opened {
+    margin-top: 56px;
+    height: 100px;
+}
+
+.services__list__anim-screen {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    position: relative;
+}
+
+@media (max-width: 1680px) {
+    .services__list__item__descr p {
+        width: 468px;
+    }
+
+    .opened {
+        height: 116px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .services__list__item__descr p {
+        width: 348px;
+    }
+
+    .opened {
+        height: 145px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .services__list__item__descr p {
+        width: 428px;
+    }
+
+    .opened {
+        height: 116px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .services__list__item {
+        padding: 16px 10px 16px 0;
+    }
+
+    .services__list__item__descr p {
+        width: 168px;
+    }
+
+    .opened {
+        height: 319px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 780px) {
+    .services__list__item__title span {
+        margin-left: 115px;
+        font-size: 40px;
+    }
+    
+}
+
+@media (max-width: 720px) {
+    .services__list {
+        margin-top: 24px;
+    }
+
+    .services__list__item__title span{
+        font-size: 32px;
+        line-height: 38.4px;
+        margin-left: 80px;
+    }
+
+    .services__list__item__descr {
+        --ML: 0px;
+        flex-direction: column;
+    }
+    
+    .services__list__item__descr p {
+        width: 100%;
+        display: block;
+    }
+
+    .opened {
+        margin-top: 51px;
+        height: 151px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 640px) {
+    .item-unfolded {
+        padding: 24px 0px 24px 0;
+    }
+
+    .services__list__item {
+        padding: 24px 10px 24px 0;
+    }
+
+    .services__list__item__count {
+        font-size: 16px;
+        line-height: 25.6px;
+    }
+
+    .services__list__item__title span{
+        font-size: 22px;
+        line-height: 26.4px;
+        margin-left: 39px;
+        margin-right: 50px;
+    }
+
+    .services__list__item__title__btn {
+        right: 0;
+    }
+
+    .opened {
+        margin-top: 31px;
+        height: 134px;
+    }
+
+    .services__list__item__descr p {
+        font-size: 16px;
+        line-height: 19.36px;
+        letter-spacing: 0.7px;
+    }
+}
+

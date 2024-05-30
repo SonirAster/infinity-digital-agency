@@ -1,0 +1,201 @@
+.sm-and-partners {
+    background: #000;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.sm-and-partners__sm-gallery-wrapper {
+    overflow: hidden;
+    padding: 40px;
+}
+
+.sm-and-partners__sm-gallery {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+}
+
+.sm-and-partners__sm-gallery__item {
+    aspect-ratio: 1;
+    width: clamp(20.4vw, 20.6vw, 20.8vw);
+    user-select: none;
+}
+
+.sm-and-partners__sm-gallery a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: clamp(20.4vw, 20.6vw, 20.8vw);
+    background: var(--light-yellow);
+}
+
+.sm-and-partners__sm-gallery a:hover img {
+    transform: scale(0.95);
+}
+
+.sm-link__img-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 2px solid black;
+    width: clamp(73.3%, 85.45%, 85.45%);
+    height: clamp(73.3%, 85.45%, 85.45%);
+    border-radius: 230px;
+}
+
+.sm-link img {
+    aspect-ratio: 1/1;
+    width: 56px;
+    transition: all 0.2s ease;
+}
+
+.sm-and-partners__partners {
+    padding: 40px;
+    margin-top: 240px;
+}
+
+.sm-and-partners__partners__title {
+    font-family: Minecraft;
+    font-size: 100px;
+    line-height: 90px;
+    letter-spacing: -0.07em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sm-and-partners__partners__brands {
+    height: 146px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.sm-and-partners__partners__brands__item {
+    cursor: pointer;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.SMW {
+    padding: 16px 20px;
+}
+
+.sm-and-partners__partners__brands__item a {
+    display: block;  
+}
+
+.sm-and-partners__partners__brands__item:hover {
+    background: var(--light-yellow);
+}
+
+.sm-and-partners__partners__brands__item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(360deg) brightness(10110%) contrast(100%);
+}
+
+.sm-and-partners__partners__brands__item:hover img {
+    filter: none;
+}
+
+
+@media (max-width: 1680px) {
+    .sm-and-partners__partners {
+        margin-top: 304px;
+        padding: 40px 16px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .sm-link img {
+        width: 32px;
+    }
+
+    .sm-and-partners__partners__brands__item {
+        padding: 0 16px;
+    }
+
+    .SMW {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .sm-and-partners__partners {
+        margin-top: 314px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .sm-and-partners__partners__brands {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .sm-and-partners__sm-gallery {
+        gap: 16px;
+    }
+
+    .sm-and-partners__partners {
+        margin-top: 204px;
+    }
+
+    .sm-and-partners__partners__title {
+        font-size: 56px;
+        line-height: 50.4px;
+    } 
+
+    .sm-and-partners__partners__brands__item {
+        width: 33.333%;
+    }
+
+    .SMW img {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 720px) {
+    .sm-and-partners__partners {
+        margin-top: 124px;
+    }
+}
+
+@media (max-width: 640px) {
+    .sm-and-partners__sm-gallery {
+        gap: 8px;
+    }
+    .sm-and-partners__partners {
+        margin-top: 104px;
+        padding: 40px 0;
+    }
+
+    .sm-and-partners__sm-gallery__item,
+    .sm-and-partners__sm-gallery a {
+        width: clamp(25vw, 26.5vw, 28vw);
+    }
+
+    .sm-link img {
+        width: 24px;
+    }
+
+    .sm-and-partners__partners__title {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    .sm-and-partners__partners__brands__item {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .sm-and-partners__sm-gallery__item,
+    .sm-and-partners__sm-gallery a {
+        width: clamp(33vw, 33.3vw, 33.34vw);
+    }
+}
+
