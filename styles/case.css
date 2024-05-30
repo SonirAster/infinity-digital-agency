@@ -27,23 +27,44 @@
 .case-head.header__subheader {
     margin-bottom: 80px;
 }
-.case-wrappper .header__subheader__left {
 
+.case-task {
+    padding: 40px;
 }
 
-.header__subheader__right {
+.case-task__head {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-bottom: 80px;
+    color: rgba(0, 0, 0, 0.5);
 }
-.header__subheader__right__awwwards {
+
+.case-task__info {
+    display: flex;
 }
-.reddot {
+
+.case-task__info__tasks {
+    flex: 0 50%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2%;
 }
-.awwwards {
+
+.case-task__info__description {
+    flex: 0 50%;
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 24px;
+    line-height: 28.8px;
+    letter-spacing: -2%;
 }
-.header__subheader__right__btn {
-}
-.action-button {
-}
-.contacts {
-}
-.footer {
+
+.highlighted {
+    font-weight: 600;
 }
