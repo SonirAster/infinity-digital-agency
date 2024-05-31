@@ -16,7 +16,8 @@
 }
 
 .cases__item img {
-    height: 560px;
+    max-height: 560px;
+    
 }
 
 /* OPTION-1 */
@@ -136,5 +137,4 @@
     .cases {
         grid-template-columns: unset;
     }
-    
 }
