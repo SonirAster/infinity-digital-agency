@@ -30,8 +30,18 @@
     background: var(--light-yellow);
 }
 
-.sm-and-partners__sm-gallery a:hover img {
-    transform: scale(0.95);
+@media (hover: hover) {
+    .sm-and-partners__sm-gallery a:hover img {
+        transform: scale(0.95);
+    }
+
+    .sm-and-partners__partners__brands__item:hover {
+        background: var(--light-yellow);
+    }
+    
+    .sm-and-partners__partners__brands__item:hover img {
+        filter: none;
+    }
 }
 
 .sm-link__img-wrapper {
@@ -86,10 +96,6 @@
     display: block;  
 }
 
-.sm-and-partners__partners__brands__item:hover {
-    background: var(--light-yellow);
-}
-
 .sm-and-partners__partners__brands__item img {
     width: 100%;
     height: 100%;
@@ -97,11 +103,6 @@
     object-fit: contain;
     filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(360deg) brightness(10110%) contrast(100%);
 }
-
-.sm-and-partners__partners__brands__item:hover img {
-    filter: none;
-}
-
 
 @media (max-width: 1680px) {
     .sm-and-partners__partners {

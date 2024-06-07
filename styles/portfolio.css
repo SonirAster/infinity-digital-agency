@@ -37,11 +37,6 @@
     border: 1px solid transparent; 
 }
 
-.portfolio__tags-line>li:hover {
-    background:#F0F0F0;
-    cursor: pointer;
-}
-
 .portfolio__tags-line>.tag-selected {
     background:#F0F0F0;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -97,10 +92,6 @@
 
 .portfolio-cases__case__slider__controls__btn[id='portfolio-prev'] img {
     transform: rotate(-180deg);
-}
-
-.portfolio-cases__case__slider__controls__btn:hover {
-    background: #000;
 }
 
 .portfolio-cases__case__slider__bullets {
@@ -170,12 +161,19 @@
     transition: all 0.2s ease;
 }
 
-.portfolio-cases__case__info__more-btn:hover img {
-    transform: translateX(4px);
-}
+@media (hover:hover) {
+    .portfolio__tags-line>li:hover {
+        background:#F0F0F0;
+        cursor: pointer;
+    }
 
-.portfolio-cases__case__info__more-btn:active {
-    transform: translateY(-5px);
+    .portfolio-cases__case__slider__controls__btn:hover {
+        background: #000;
+    }
+
+    .portfolio-cases__case__info__more-btn:hover img {
+        transform: translateX(4px);
+    }
 }
 
 @media (max-width: 1440px) {

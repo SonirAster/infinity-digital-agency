@@ -14,14 +14,8 @@
     position: relative;
 }
 
-.nav__logo:focus-within {
-    border:none;
-    outline: none;
-}
-
-.nav__logo a:focus {
-    display: block;
-    min-height: 100%;
+.nav.toggled .nav__logo {
+    min-width: 100%;
 }
 
 .nav__logo__cancel {
@@ -67,16 +61,6 @@
     padding: 8px 24px;
 }
 
-.nav__panel__list a:hover {
-    color: #000;
-    background:#F0F0F0;
-    border-radius: 56px;
-}
-
-.nav__panel__list a:focus {
-    border-radius: 32px;
-}
-
 .nav__panel__lang-switch {
     position: relative;
     margin-right: 8px;
@@ -89,14 +73,6 @@
     transform: translateX(-50%);
 }
 
-.nav__panel__lang-switch:hover .nav__panel__lang-switch__list {
-    display: block;
-}
-
-.nav__panel__lang-switch:hover .nav__panel__lang-switch__title i img {
-    transform: rotate(180deg);
-}
-
 .nav__panel__lang-switch__title {
     border-radius: 60px;
     padding: 16px;
@@ -105,11 +81,6 @@
     gap: 2.95px;
     align-items: center;
     align-content: center;
-}
-
-.nav__panel__lang-switch__title:hover,
-.nav__panel__lang-switch__list__item:hover {
-    background: #F0F0F0;
 }
 
 .nav__panel__lang-switch__title span {
@@ -149,10 +120,6 @@
     justify-content: center;
 }
 
-.nav__panel__lang-switch__list__item:hover {
-    background: #F0F0F0;
-}
-
 .lang-switch__selected {
     display: none;
 }
@@ -175,19 +142,6 @@
     justify-content: center;
 }
 
-.nav__panel__btn:hover {
-    border: 1px solid #000;
-    transform: translate(3px, -3px);
-}
-
-.nav__panel__btn:active {
-    transform: translate(7px, -7px);
-}
-
-.nav__panel__btn:hover .nav__panel__btn__wrapper {
-    background: #000;
-}
-
 .nav__panel__btn__wrapper {
     position: absolute;
     right: 0;
@@ -195,6 +149,14 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
+}
+
+.nav__panel__btn:hover {
+    border: 1px solid #000;
+}
+
+.nav__panel__btn:hover .nav__panel__btn__wrapper {
+    background: #000;
 }
 
 .nav__panel__btn svg {
@@ -229,17 +191,17 @@
     cursor: pointer;
 }
 
-.nav.toggled .nav__logo__cancel:focus,
-.nav.toggled .nav__logo>a:focus, 
-.nav.toggled .nav__panel__list a:focus, 
-.nav.toggled .nav__panel__btn:focus {
-    border: 1px solid rgba(0, 140, 241, 1);
-    outline: 3px solid rgba(0, 140, 241, 0.3);
-}
-
 .nav__logo:focus-within {
     border: none;
     outline: none;
+}
+
+.nav__panel__lang-switch:hover .nav__panel__lang-switch__list {
+    display: block;
+}
+
+.nav__panel__lang-switch:hover .nav__panel__lang-switch__title i img {
+    transform: rotate(180deg);
 }
 
 .nav.toggled .nav__logo {
@@ -306,6 +268,41 @@
     display: block;
     width: 24px;
     height: 24px;
+}
+
+@media (hover:hover) {
+    .nav__panel__list a:hover {
+        color: #000;
+        background:#F0F0F0;
+        border-radius: 56px;
+    }
+    
+    .nav__panel__list a:focus {
+        border-radius: 32px;
+    }
+
+    .nav__panel__lang-switch__title:hover,
+    .nav__panel__lang-switch__list__item:hover {
+        background: #F0F0F0;
+    }
+
+    .nav__logo:focus-within {
+        border:none;
+        outline: none;
+    }
+    
+    .nav__logo a:focus {
+        display: block;
+        min-height: 100%;
+    }
+    
+    .nav.toggled .nav__logo__cancel:focus,
+    .nav.toggled .nav__logo>a:focus, 
+    .nav.toggled .nav__panel__list a:focus, 
+    .nav.toggled .nav__panel__btn:focus {
+        border: 1px solid rgba(0, 140, 241, 1);
+        outline: 3px solid rgba(0, 140, 241, 0.3);
+    }
 }
 
 @media (max-width: 1280px) {

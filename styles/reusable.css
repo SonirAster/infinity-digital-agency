@@ -16,20 +16,36 @@
     letter-spacing: -0.05em;
 }
 
-.action-button:hover svg,
-.action-button:active svg {
-    fill: #000;
-    transition: 0.3s all ease;
-    color: var(--light-yellow);
-}
+@media (hover: hover) {
+    .action-button:hover svg,
+    .action-button:active svg {
+        fill: #000;
+        transition: 0.3s all ease;
+        color: var(--light-yellow);
+    }
+    
+    .action-button:hover {
+        cursor: pointer;
+    }
 
-.action-button:hover {
-    cursor: pointer;
-    transform: translateY(3px);
-}
+    .black-button:hover {
+        cursor: pointer;
+        background: var(--light-yellow);
+        color: #000;
+    }
+    
+    .black-button:hover span {
+        color: rgba(0, 0, 0, 0.5);
+    }
 
-.action-button:active {
-    transform: translateY(10px);
+    .plus-button:hover {
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+    
+    .plus-button:active {
+        transform: scale(0.9);
+    }
 }
 
 .black-button {
@@ -48,16 +64,6 @@
 .black-button span {
     transition: all 0.4s ease;
     color: var(--light-yellow);
-}
-
-.black-button:hover {
-    cursor: pointer;
-    background: var(--light-yellow);
-    color: #000;
-}
-
-.black-button:hover span {
-    color: rgba(0, 0, 0, 0.5);
 }
 
 .plus-button {
@@ -81,15 +87,6 @@
 
 .plus-button.toggled svg #main-dash {
    display: none;
-}
-
-.plus-button:hover {
-    cursor: pointer;
-    border: 1px solid #000;
-}
-
-.plus-button:active {
-    transform: scale(0.9);
 }
 
 /* Demo-Header-- */
@@ -135,6 +132,7 @@
     font-size: 18px;
     line-height: 21.78px;
     letter-spacing: -2%;
+    padding-left: 16px;
 }
 
 .demo-header__title {
@@ -359,12 +357,6 @@
     font-weight: 600;
 }
 
-@media (max-width: 1700px) {}
-@media (max-width: 1400px) {}
-@media (max-width: 1350px) {}
-@media (max-width: 1300px) {}
-@media (max-width: 1250px) {}
-@media (max-width: 1150px) {}
 @media (max-width: 1080px) {
     .demo-text-block__head {
         font-size: 16px;
@@ -382,10 +374,7 @@
         line-height: 19.2px;
     }
 }
-@media (max-width: 900px) {}
-@media (max-width: 895px) {}
-@media (max-width: 750px) {}
-@media (max-width: 700px) {}
+
 @media (max-width: 640px) {
     .demo-text-block {
         padding: 24px 16px;
@@ -405,6 +394,3 @@
         line-height: 16.8px;
     }
 }
-@media (max-width: 450px) {}
-@media (max-width: 425px) {}
-@media (max-width: 400px) {}

@@ -74,14 +74,32 @@
     margin-bottom: 0;
 }
 
-.footer__sm__list__item:focus-within {
-    border: none;
-    outline: none;
-}
+@media(hover: hover) {
+    .footer__sm__list__item:focus-within {
+        border: none;
+        outline: none;
+    }
 
-.footer__sm__list__item:hover {
-    border: rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.3);
+    .footer__sm__list__item:hover {
+        border: rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer__contacts__list__item:hover {
+        color: var(--light-yellow);
+    }
+
+    .footer__presentation-btn:hover {
+        cursor: pointer;
+        background: var(--light-yellow);
+        color: #000;
+        transition: all 0.2s ease;
+    }
+    
+    .footer__presentation-btn:hover svg {
+        fill: #000;
+        color: #fff;
+    }
 }
 
 .footer__contacts__list {
@@ -100,10 +118,6 @@
 
 .footer.toggled .footer__contacts {
     display: none;
-}
-
-.footer__contacts__list__item:hover {
-    color: var(--light-yellow);
 }
 
 .footer__presentation-btn {
@@ -127,18 +141,6 @@
 .footer.toggled .footer__presentation-btn {
     font-size: 12px;
     line-height: 14.4px;
-}
-
-.footer__presentation-btn:hover {
-    cursor: pointer;
-    background: var(--light-yellow);
-    color: #000;
-    transition: all 0.2s ease;
-}
-
-.footer__presentation-btn:hover svg {
-    fill: #000;
-    color: #fff;
 }
 
 .footer__presentation-btn__text-wrapper {
