@@ -1,33 +1,33 @@
 function animateCircle () {
     let circle = gsap.timeline();
-
-    const primaryAnimTrigger = {
-        trigger: '.demo-item',
-        start: 'top 50%',
-        end: '+=600px',
-        scrub: true
-    }
+    let yParameter = '-200px';
     
-    const secondaryAnimTrigger = {
-        trigger: '.demo-item',
-        start: '250px 50%',
-        end: '+=600px',
-        scrub: true
-    }
-    
-    const roundSecondaryAnim = {
-        keyframes: [
-            {scale: 0.7, duration: 0.7},
-            {y: '-200px', scale: 0.7, duration: 1.2}
-        ],
-        scrollTrigger: secondaryAnimTrigger
-    }
-    
-    circle.to('.demo-item__ring', {
+    const circleRotation = {
         rotate: 100,
         duration: 3,
-        scrollTrigger: primaryAnimTrigger
-    }).to('.circle', roundSecondaryAnim);
+        scrollTrigger: {
+            trigger: '.demo-item',
+            start: 'top 50%',
+            end: '+=600px',
+            scrub: true
+        }
+    }
+    const circleLifting = {
+        keyframes: [
+            {scale: 0.7, duration: 0.7},
+            {y: yParameter, scale: 0.7, duration: 1.2}
+        ],
+        scrollTrigger: {
+            trigger: '.demo-item',
+            start: '250px 50%',
+            end: '+=600px',
+            scrub: true
+        }
+    }
+
+    circle
+        .to('.demo-item__ring', circleRotation)
+        .to('.demo-item', circleLifting);
 }
 
 function animateTitle () {
@@ -123,7 +123,7 @@ function animateCaseHero () {
 listenTo(window, 'load', ()=> {
     animateCircle ();
     animateTitle ();
-    animateCaseHero ();
+    //animateCaseHero ();
     //animateGallery();
 })
 
