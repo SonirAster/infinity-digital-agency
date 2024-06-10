@@ -41,7 +41,10 @@
 }
 
 .header__title {
+    overflow-x: hidden;
+    display: flex;
     width: 100%;
+    white-space: nowrap;
     padding: 39px 100px 40px 100px;
     font-family: Minecraft;
     text-transform: uppercase;
@@ -49,10 +52,15 @@
     line-height: clamp(56px, 16.6vw, 320px);
     font-weight: 400;
     letter-spacing: -0.05em;
-    text-align: center;
+    /* text-align: center; */
     border-right: 1px solid var(--border);
     border-left: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+}
+
+.header__title p {
+
+    display: block;
 }
 
 .header__subheader {

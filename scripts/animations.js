@@ -1,49 +1,76 @@
 function animateCircle () {
+    let mm = gsap.matchMedia();
+
+    mm.add('(min-width: 1081px)', () => {
+        const rotationScrollTrigger = {
+            trigger: '.we-are__descr',
+            start: '15% 80px',
+            end: '+=600px',
+            scrub: true,
+        }
+
+
+        const liftingScrollTrigger = {
+            trigger: '.demo-item',
+            start: '250px 20%',
+            end: '+=500px',
+            scrub: true
+        }
+
+        initCircleAnimation(rotationScrollTrigger, liftingScrollTrigger);
+    })
+
+    mm.add('(max-width: 1080px)', () => {
+            const rotationScrollTrigger = {
+                trigger: '.we-are__descr',
+                start: '10% 100px',
+                end: '+=700px',
+                scrub: true
+            }
+
+            const liftingScrollTrigger = {
+                trigger: '.demo-item',
+                start: '80px 10%',
+                end: '+=500px',
+                scrub: true
+            }
+
+            initCircleAnimation (rotationScrollTrigger, liftingScrollTrigger);
+    })
+}
+
+function initCircleAnimation (circleRotationScrollTrigger, circleLiftingScrollTrigger) {
     let circle = gsap.timeline();
     let yParameter = '-200px';
-    
+
     const circleRotation = {
         rotate: 100,
         duration: 3,
-        scrollTrigger: {
-            trigger: '.demo-item',
-            start: 'top 50%',
-            end: '+=600px',
-            scrub: true
-        }
+        scrollTrigger: circleRotationScrollTrigger
     }
+
     const circleLifting = {
         keyframes: [
             {scale: 0.7, duration: 0.7},
             {y: yParameter, scale: 0.7, duration: 1.2}
         ],
-        scrollTrigger: {
-            trigger: '.demo-item',
-            start: '250px 50%',
-            end: '+=600px',
-            scrub: true
-        }
+        scrollTrigger: circleLiftingScrollTrigger
     }
 
     circle
-        .to('.demo-item__ring', circleRotation)
-        .to('.demo-item', circleLifting);
+    .to('.demo-item__ring', circleRotation)
+    .to('.demo-item', circleLifting);
 }
 
 function animateTitle () {
-    let sizeTrigger = {
-        trigger: '.header__pretitle',
-        start: 'top 100',
-        endTrigger: '.header__title',
-        end: 'bottom -200px',
-        scrub: true,
-    }
+    let titleWidth = getRect(qs('.header__title')).width;
+    let marker = qs('.gallery-end-marker');
 
     gsap.to('.header__title p', {
-        y: -50,
-        duration: 2,
-        scrollTrigger: sizeTrigger,
-        scale: 0.8
+        x: -(getRect(marker).right - titleWidth),
+        duration: 50,
+        repeat: -1,
+        ease: 'linear'
     })
 }
 
